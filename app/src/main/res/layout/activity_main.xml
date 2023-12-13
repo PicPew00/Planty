@@ -1,18 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="16dp"
 
-    <TextView
-        android:layout_width="wrap_content"
+    android:columnCount="2"
+    android:rowCount="3"
+    android:orientation="horizontal"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <!-- Card 1 -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"> <!-- This sets the card background color -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Add your ImageView, Switch, and TextView here -->
+
+    </com.google.android.material.card.MaterialCardView>
+    <!-- Card 2-->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"> <!-- This sets the card background color -->
+
+        <!-- Add your ImageView, Switch, and TextView here -->
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Card 3-->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#F2F6FC"> <!-- This sets the card background color -->
+
+        <!-- Add your ImageView, Switch, and TextView here -->
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Card 4-->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"> <!-- This sets the card background color -->
+
+        <!-- Add your ImageView, Switch, and TextView here -->
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Card 5 -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"> <!-- This sets the card background color -->
+
+        <!-- Add your ImageView, Switch, and TextView here -->
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Card 6-->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"> <!-- This sets the card background color -->
+
+        <!-- Add your ImageView, Switch, and TextView here -->
+        <Switch
+            android:id="@+id/switch5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Switch" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Repeat the above MaterialCardView block for each card (Cards 2-6) -->
+    <!-- ... -->
+
+</GridLayout>
