@@ -7,7 +7,8 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     int po=1;
-    int p=22;
+    short t = 0;
+    int c=228;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
