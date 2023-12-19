@@ -1,111 +1,233 @@
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="16dp">
 
-    android:columnCount="2"
-    android:rowCount="3"
-    android:orientation="horizontal"
-    android:layout_marginTop="?attr/actionBarSize">
+    <GridLayout
+        android:id="@+id/cards_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/task_bar"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:orientation="horizontal"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="16dp"> <!-- Padding added to prevent overlap with taskbar -->
 
-    <!-- Card 1 -->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView1"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="50dp" /> <!-- Adjust this value as needed to move the switch down -->
+
+
+                <!-- Add other views like ImageView and TextView here -->
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Switch
+                    android:id="@+id/switch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="50dp" /> <!-- Adjust this value as needed to move the switch down -->
+
+
+                <!-- Add other views like ImageView and TextView here -->
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView3"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Switch
+                    android:id="@+id/switch3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="50dp" /> <!-- Adjust this value as needed to move the switch down -->
+
+
+                <!-- Add other views like ImageView and TextView here -->
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView4"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Switch
+                    android:id="@+id/switch4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="50dp" /> <!-- Adjust this value as needed to move the switch down -->
+
+
+                <!-- Add other views like ImageView and TextView here -->
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView5"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Switch
+                    android:id="@+id/switch5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp" /> <!-- Adjust this value as needed to move the switch down -->
+
+
+                <!-- Add other views like ImageView and TextView here -->
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView6"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Switch
+                    android:id="@+id/switch6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp" /> <!-- Adjust this value as needed to move the switch down -->
+
+
+                <!-- Add other views like ImageView and TextView here -->
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </GridLayout>
+
+    <!-- Task bar -->
+    <LinearLayout
+        android:id="@+id/task_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="#FFFFFF"> <!-- This sets the card background color -->
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:weightSum="3"
+        android:background="#F0F0F0"> <!-- Background color for visibility -->
 
-        <!-- Add your ImageView, Switch, and TextView here -->
-
-    </com.google.android.material.card.MaterialCardView>
-    <!-- Card 2-->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="#FFFFFF"> <!-- This sets the card background color -->
-
-        <!-- Add your ImageView, Switch, and TextView here -->
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <!-- Card 3-->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="#F2F6FC"> <!-- This sets the card background color -->
-
-        <!-- Add your ImageView, Switch, and TextView here -->
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <!-- Card 4-->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="#FFFFFF"> <!-- This sets the card background color -->
-
-        <!-- Add your ImageView, Switch, and TextView here -->
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <!-- Card 5 -->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="#FFFFFF"> <!-- This sets the card background color -->
-
-        <!-- Add your ImageView, Switch, and TextView here -->
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <!-- Card 6-->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="#FFFFFF"> <!-- This sets the card background color -->
-
-        <!-- Add your ImageView, Switch, and TextView here -->
-        <Switch
-            android:id="@+id/switch5"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/buttonHome"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Switch" />
+            android:layout_weight="1"
+            android:text="Home" />
 
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Settings" />
 
-    </com.google.android.material.card.MaterialCardView>
-
-
-    <!-- Repeat the above MaterialCardView block for each card (Cards 2-6) -->
-    <!-- ... -->
-
-</GridLayout>
+        <Button
+            android:id="@+id/buttonManageAccounts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Manage Accounts" />
+    </LinearLayout>
+</RelativeLayout>
