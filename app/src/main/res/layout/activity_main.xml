@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/gradient_2">
 
     <GridLayout
         android:id="@+id/cards_grid"
@@ -14,13 +15,13 @@
         android:layout_marginTop="?attr/actionBarSize"
         android:columnCount="2"
         android:orientation="horizontal"
-        android:paddingBottom="16dp"
+        android:paddingBottom="18dp"
         android:rowCount="3"> <!-- Padding added to prevent overlap with taskbar -->
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView1"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -37,7 +38,8 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp">
+                android:paddingBottom="8dp"
+                android:background="@drawable/gradient" >
 
                 <Switch
                     android:id="@+id/switch1"
@@ -50,22 +52,21 @@
                     android:minHeight="48dp" /> <!-- Adjust this value as needed to move the switch down -->
 
                 <ImageView
-                    android:id="@+id/drop"
+                    android:id="@+id/light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginRight="60dp"
                     android:layout_weight="1"
-                    android:color="#000000"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/drop" />
+                    android:src="@drawable/light" />
 
                 <TextView
-                    android:id="@+id/title_text_view"
+                    android:id="@+id/light_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@id/drop"
+                    android:layout_alignLeft="@id/light"
                     android:layout_marginTop="52dp"
 
                     android:layout_weight="1"
@@ -75,8 +76,8 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/title_text_view2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/title_text_view1"
+                    android:layout_width="113dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
                     android:layout_marginTop="80dp"
@@ -94,12 +95,12 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView2"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">>
+            app:cardElevation="4dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -107,7 +108,8 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp">
+                android:paddingBottom="8dp"
+                android:background="@drawable/gradient">
 
                 <Switch
                     android:id="@+id/switch2"
@@ -119,6 +121,42 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp" /> <!-- Adjust this value as needed to move the switch down -->
 
+                <ImageView
+                    android:id="@+id/humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="60dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/humidity" />
+
+                <TextView
+                    android:id="@+id/humidity_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/humidity"
+                    android:layout_marginTop="52dp"
+
+
+                    android:text="Water Quality"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_text_view3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_weight="1"
+                    android:text="Panasonic"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
 
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
@@ -128,8 +166,8 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView3"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
@@ -143,7 +181,8 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp">
+                android:paddingBottom="8dp"
+                android:background="@drawable/gradient">
 
                 <Switch
                     android:id="@+id/switch3"
@@ -155,7 +194,42 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp" /> <!-- Adjust this value as needed to move the switch down -->
 
+                <ImageView
+                    android:id="@+id/router"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="60dp"
 
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/router" />
+
+                <TextView
+                    android:id="@+id/router_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/router"
+                    android:layout_marginTop="52dp"
+
+
+                    android:text="Air Quality"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_text_view4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="60dp"
+
+                    android:text="TP Link"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
 
@@ -163,8 +237,8 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView4"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
@@ -178,7 +252,9 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp">
+                android:paddingBottom="8dp"
+                android:background="@drawable/gradient">
+
 
                 <Switch
                     android:id="@+id/switch4"
@@ -190,6 +266,42 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp" /><!-- Adjust this value as needed to move the switch down -->
 
+                <ImageView
+                    android:id="@+id/temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="60dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/temperature" />
+
+                <TextView
+                    android:id="@+id/title_text_view5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/temperature"
+                    android:layout_marginTop="52dp"
+
+
+                    android:text="Temperature"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_text_view6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="60dp"
+
+                    android:text="Sensor Hue 2"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
 
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
@@ -198,13 +310,13 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView5"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
-            >
+
 
 
             <RelativeLayout
@@ -213,7 +325,8 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp">
+                android:paddingBottom="8dp"
+                android:background="@drawable/gradient">
 
                 <Switch
                     android:id="@+id/switch5"
@@ -225,6 +338,45 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp" /><!-- Adjust this value as needed to move the switch down -->
 
+                <ImageView
+                    android:id="@+id/nodes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="60dp"
+
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/nodes" />
+
+                <TextView
+                    android:id="@+id/title_text_view8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/nodes"
+                    android:layout_marginTop="52dp"
+
+
+
+                    android:text="Add Rooms"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_text_view9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="60dp"
+
+
+                    android:text="Room Hue 2"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
 
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
@@ -233,13 +385,12 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView6"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
-            >
 
 
             <RelativeLayout
@@ -247,7 +398,8 @@
                 android:layout_height="match_parent"                android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp">
+                android:paddingBottom="8dp"
+                android:background="@drawable/gradient">
 
                 <Switch
                     android:id="@+id/switch6"
@@ -259,7 +411,45 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp" /><!-- Adjust this value as needed to move the switch down -->
 
+                <ImageView
+                    android:id="@+id/pie_chart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="60dp"
 
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pie_chart" />
+
+                <TextView
+                    android:id="@+id/title_text_view10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/pie_chart"
+                    android:layout_marginTop="52dp"
+
+
+
+                    android:text="Data Visualization"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_text_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="60dp"
+
+
+                    android:text="Pie and Bars"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -271,7 +461,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#F0F0F0"
+        android:background="#C4D5F4"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="3"> <!-- Background color for visibility -->
