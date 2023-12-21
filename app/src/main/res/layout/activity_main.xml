@@ -3,18 +3,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@drawable/gradient_2">
+
+    android:background="#E3E2E2">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#DFDFDF"
+            android:paddingStart="20dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+
+            <TextView
+                android:id="@+id/green_home"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="May 16, 2021"
+                android:textColor="#7C8293"
+                />
+
+            <!-- Other TextViews can follow -->
+            <TextView
+                android:id="@+id/green_home2"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Green House"
+                android:textColor="#07123C"
+                android:textStyle="bold"
+                android:textSize="22dp" />
+
+            <!-- Green Circle with TextView with LinearLayout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/green_circle"
+                android:layout_gravity="center_vertical"
+
+                />
+
+            <TextView
+                android:id="@+id/green_home3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="20 sensors running"
+                android:textColor="#07123C"
+                android:textSize="12dp"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bell"
+            android:layout_width="50dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/notify" />
+
+    </RelativeLayout>
+    <!-- Task bar -->
 
     <GridLayout
         android:id="@+id/cards_grid"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_above="@+id/task_bar"
+        android:layout_height="475dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginTop="130dp"
         android:columnCount="2"
         android:orientation="horizontal"
+        android:padding="16dp"
         android:paddingBottom="18dp"
         android:rowCount="3"> <!-- Padding added to prevent overlap with taskbar -->
 
@@ -35,11 +119,11 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp"
-                android:background="@drawable/gradient" >
+                android:paddingBottom="8dp">
 
                 <Switch
                     android:id="@+id/switch1"
@@ -105,11 +189,11 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp"
-                android:background="@drawable/gradient">
+                android:paddingBottom="8dp">
 
                 <Switch
                     android:id="@+id/switch2"
@@ -174,15 +258,14 @@
             app:cardElevation="4dp">
 
 
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp"
-                android:background="@drawable/gradient">
+                android:paddingBottom="8dp">
 
                 <Switch
                     android:id="@+id/switch3"
@@ -249,11 +332,11 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp"
-                android:background="@drawable/gradient">
+                android:paddingBottom="8dp">
 
 
                 <Switch
@@ -318,15 +401,14 @@
             app:cardElevation="4dp">
 
 
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp"
-                android:background="@drawable/gradient">
+                android:paddingBottom="8dp">
 
                 <Switch
                     android:id="@+id/switch5"
@@ -356,7 +438,6 @@
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@id/nodes"
                     android:layout_marginTop="52dp"
-
 
 
                     android:text="Add Rooms"
@@ -395,11 +476,12 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"                android:paddingLeft="8dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="8dp"
-                android:background="@drawable/gradient">
+                android:paddingBottom="8dp">
 
                 <Switch
                     android:id="@+id/switch6"
@@ -431,7 +513,6 @@
                     android:layout_marginTop="52dp"
 
 
-
                     android:text="Data Visualization"
                     android:textColor="#000000"
                     android:textSize="16dp"
@@ -455,36 +536,89 @@
         </com.google.android.material.card.MaterialCardView>
     </GridLayout>
 
-    <!-- Task bar -->
     <LinearLayout
         android:id="@+id/task_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#C4D5F4"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_toolbar"
+        android:backgroundTint="#B4C9F1"
         android:gravity="center"
         android:orientation="horizontal"
-        android:weightSum="3"> <!-- Background color for visibility -->
+        android:padding="10dp"
+        android:weightSum="1.95">
+        >
 
-        <Button
-            android:id="@+id/buttonHome"
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/btnDownloadPdf"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="56dp"-->
+        <!--            android:layout_margin="16dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textAllCaps="true"-->
+        <!--            app:icon="@drawable/home"-->
+        <!--            app:iconGravity="textStart"-->
+        <!--            app:iconPadding="10dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            tools:text="Download Pdf" />-->
+
+        <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Home" />
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/home">
 
-        <Button
+        </ImageView>
+
+        <ImageView
             android:id="@+id/buttonSettings"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Settings" />
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/settings" />
 
-        <Button
+        <!--        <Button-->
+        <!--            android:id="@+id/buttonManageAccounts"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="0.8"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Manage Accounts"-->
+        <!--            android:drawableLeft="@drawable/user"/>-->
+
+        <ImageView
             android:id="@+id/buttonManageAccounts"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Manage Accounts" />
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/user" />
+
     </LinearLayout>
 </RelativeLayout>
