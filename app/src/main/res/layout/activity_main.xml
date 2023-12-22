@@ -3,24 +3,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+
+    android:background="#E3E2E2">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#DFDFDF"
+            android:paddingStart="20dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+
+            <TextView
+                android:id="@+id/green_home"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="May 16, 2021"
+                android:textColor="#7C8293"
+                />
+
+            <!-- Other TextViews can follow -->
+            <TextView
+                android:id="@+id/green_home2"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Green House"
+                android:textColor="#07123C"
+                android:textStyle="bold"
+                android:textSize="22dp" />
+
+            <!-- Green Circle with TextView with LinearLayout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/green_circle"
+                android:layout_gravity="center_vertical"
+
+                />
+
+            <TextView
+                android:id="@+id/green_home3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="20 sensors running"
+                android:textColor="#07123C"
+                android:textSize="12dp"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bell"
+            android:layout_width="50dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/notify" />
+
+    </RelativeLayout>
+    <!-- Task bar -->
 
     <GridLayout
         android:id="@+id/cards_grid"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_above="@+id/task_bar"
+        android:layout_height="475dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginTop="130dp"
         android:columnCount="2"
         android:orientation="horizontal"
-        android:paddingBottom="16dp"
+        android:padding="16dp"
+        android:paddingBottom="18dp"
         android:rowCount="3"> <!-- Padding added to prevent overlap with taskbar -->
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView1"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -34,6 +119,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
@@ -50,22 +136,21 @@
                     android:minHeight="48dp" /> <!-- Adjust this value as needed to move the switch down -->
 
                 <ImageView
-                    android:id="@+id/drop"
+                    android:id="@+id/light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginRight="60dp"
                     android:layout_weight="1"
-                    android:color="#000000"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/drop" />
+                    android:src="@drawable/light" />
 
                 <TextView
-                    android:id="@+id/title_text_view"
+                    android:id="@+id/light_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@id/drop"
+                    android:layout_alignLeft="@id/light"
                     android:layout_marginTop="52dp"
 
                     android:layout_weight="1"
@@ -75,8 +160,8 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/title_text_view2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/title_text_view1"
+                    android:layout_width="113dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
                     android:layout_marginTop="80dp"
@@ -94,16 +179,17 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView2"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">>
+            app:cardElevation="4dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
@@ -119,6 +205,42 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp" /> <!-- Adjust this value as needed to move the switch down -->
 
+                <ImageView
+                    android:id="@+id/humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="60dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/humidity" />
+
+                <TextView
+                    android:id="@+id/humidity_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/humidity"
+                    android:layout_marginTop="52dp"
+
+
+                    android:text="Water Quality"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_text_view3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_weight="1"
+                    android:text="Panasonic"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
 
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
@@ -128,18 +250,18 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView3"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
 
 
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
@@ -155,7 +277,42 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp" /> <!-- Adjust this value as needed to move the switch down -->
 
+                <ImageView
+                    android:id="@+id/router"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="60dp"
 
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/router" />
+
+                <TextView
+                    android:id="@+id/router_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/router"
+                    android:layout_marginTop="52dp"
+
+
+                    android:text="Air Quality"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_text_view4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="60dp"
+
+                    android:text="TP Link"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
 
@@ -163,8 +320,8 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView4"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
@@ -175,10 +332,12 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="8dp">
+
 
                 <Switch
                     android:id="@+id/switch4"
@@ -190,6 +349,42 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp" /><!-- Adjust this value as needed to move the switch down -->
 
+                <ImageView
+                    android:id="@+id/temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="60dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/temperature" />
+
+                <TextView
+                    android:id="@+id/title_text_view5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/temperature"
+                    android:layout_marginTop="52dp"
+
+
+                    android:text="Temperature"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_text_view6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="60dp"
+
+                    android:text="Sensor Hue 2"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
 
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
@@ -198,18 +393,18 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView5"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
-            >
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
@@ -225,6 +420,44 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp" /><!-- Adjust this value as needed to move the switch down -->
 
+                <ImageView
+                    android:id="@+id/nodes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="60dp"
+
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/nodes" />
+
+                <TextView
+                    android:id="@+id/title_text_view8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/nodes"
+                    android:layout_marginTop="52dp"
+
+
+                    android:text="Add Rooms"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_text_view9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="60dp"
+
+
+                    android:text="Room Hue 2"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
 
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
@@ -233,18 +466,19 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView6"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
             android:layout_margin="8dp"
             app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
-            >
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"                android:paddingLeft="8dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="8dp">
@@ -259,42 +493,132 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp" /><!-- Adjust this value as needed to move the switch down -->
 
+                <ImageView
+                    android:id="@+id/pie_chart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="60dp"
 
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pie_chart" />
+
+                <TextView
+                    android:id="@+id/title_text_view10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/pie_chart"
+                    android:layout_marginTop="52dp"
+
+
+                    android:text="Data Visualization"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_text_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="60dp"
+
+
+                    android:text="Pie and Bars"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
     </GridLayout>
 
-    <!-- Task bar -->
     <LinearLayout
         android:id="@+id/task_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#F0F0F0"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_toolbar"
+        android:backgroundTint="#B4C9F1"
         android:gravity="center"
         android:orientation="horizontal"
-        android:weightSum="3"> <!-- Background color for visibility -->
+        android:padding="10dp"
+        android:weightSum="1.95">
+        >
 
-        <Button
-            android:id="@+id/buttonHome"
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/btnDownloadPdf"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="56dp"-->
+        <!--            android:layout_margin="16dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textAllCaps="true"-->
+        <!--            app:icon="@drawable/home"-->
+        <!--            app:iconGravity="textStart"-->
+        <!--            app:iconPadding="10dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            tools:text="Download Pdf" />-->
+
+        <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Home" />
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/home">
 
-        <Button
+        </ImageView>
+
+        <ImageView
             android:id="@+id/buttonSettings"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Settings" />
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/settings" />
 
-        <Button
+        <!--        <Button-->
+        <!--            android:id="@+id/buttonManageAccounts"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="0.8"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Manage Accounts"-->
+        <!--            android:drawableLeft="@drawable/user"/>-->
+
+        <ImageView
             android:id="@+id/buttonManageAccounts"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Manage Accounts" />
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/user" />
+
     </LinearLayout>
 </RelativeLayout>
