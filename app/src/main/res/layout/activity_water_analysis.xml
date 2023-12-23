@@ -1,0 +1,244 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#E3E2E2">
+
+
+    <ImageView
+        android:id="@+id/new_image"
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="0dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/start_water_analysis"
+        android:background="#A0D8DD"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#DFDFDF"
+            android:paddingStart="20dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="199dp"
+                android:layout_height="83dp"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/water_analysis" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <!-- Task bar -->
+
+    <GridLayout
+        android:id="@+id/cards_grid"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="379dp"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:padding="16dp"
+
+        android:rowCount="1"> <!-- Padding added to prevent overlap with taskbar -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView1"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/ph_drop"
+                    android:layout_width="match_parent"
+                    android:layout_height="204dp"
+                    android:padding="10dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ph_drop"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/humidityfetch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="6dp"
+                    android:text="7"
+                    android:textColor="@color/white"
+                    android:textSize="50dp"
+                    android:textStyle="normal" />
+                <!-- Add other views like ImageView and TextView here -->
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp">
+
+
+                <ImageView
+                    android:id="@+id/ph_alarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="204dp"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/alarm"
+
+
+                    />
+
+                <!-- Add other views like ImageView and TextView here -->
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/task_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_toolbar"
+        android:backgroundTint="#B4C9F1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1.95">
+        >
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/btnDownloadPdf"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="56dp"-->
+        <!--            android:layout_margin="16dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textAllCaps="true"-->
+        <!--            app:icon="@drawable/home"-->
+        <!--            app:iconGravity="textStart"-->
+        <!--            app:iconPadding="10dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            tools:text="Download Pdf" />-->
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/home">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/buttonSettings"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/settings" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/buttonManageAccounts"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="0.8"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Manage Accounts"-->
+        <!--            android:drawableLeft="@drawable/user"/>-->
+
+        <ImageView
+            android:id="@+id/buttonManageAccounts"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/user" />
+
+
+    </LinearLayout>
+</RelativeLayout>
