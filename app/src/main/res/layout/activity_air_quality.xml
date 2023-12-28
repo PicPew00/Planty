@@ -26,11 +26,11 @@
             android:padding="12dp">
 
             <ImageView
-                android:layout_width="200dp"
+                android:layout_width="100dp"
                 android:layout_height="77dp"
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
-                android:src="@drawable/notification_taco_bell" />
+                android:src="@drawable/airquality" />
 
 
         </LinearLayout>
@@ -44,20 +44,196 @@
         android:layout_height="wrap_content"
         >
 
+
+            <!-- Element Block-->
+            <!-- Element Block for 'MDL Room' -->
+            <LinearLayout
+                android:id="@+id/top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#DFDFDF"
+                android:paddingStart="20dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- Element Block for 'Germination' -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner"
+                    android:backgroundTint="#FFFFFF"
+                    android:padding="16dp"
+                    android:elevation="4dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/textViewRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MDL Room"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#7C8293"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Repeating block for each gas -->
+                    <!-- CO2 Level -->
+                    <TextView
+                        android:id="@+id/textViewCO2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewRoom"
+                        android:text="Level of CO2:"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <ImageView
+                        android:id="@+id/imageViewCO2Bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="6dp"
+                        android:layout_toEndOf="@id/textViewCO2"
+                        android:layout_below="@+id/textViewRoom"
+                        android:layout_toRightOf="@id/textViewCO2"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/level_bar_1" />
+
+                    <TextView
+                        android:id="@+id/textViewCO2Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/imageViewCO2Bar"
+                        android:layout_alignBottom="@id/textViewCO2"
+                        android:layout_marginStart="18dp"
+                        android:text="130 PPM"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <!-- Repeat the above block for SO2, NO2, and NH3 -->
+                    <!-- SO2 Level -->
+
+
+                    <!-- ... (Previous code remains the same) ... -->
+
+                    <!-- Repeat the above block for SO2, NO2, and NH3 -->
+                    <!-- SO2 Level -->
+                    <TextView
+                        android:id="@+id/textViewSO2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewCO2Value"
+                        android:text="Level of SO2:"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <ImageView
+                        android:id="@+id/imageViewSO2Bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="6dp"
+                        android:layout_toEndOf="@id/textViewSO2"
+                        android:layout_below="@+id/textViewCO2Value"
+                        android:layout_toRightOf="@id/textViewSO2"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/level_bar_1" />
+
+                    <TextView
+                        android:id="@+id/textViewSO2Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/imageViewSO2Bar"
+                        android:layout_alignBottom="@id/textViewSO2"
+                        android:layout_marginStart="18dp"
+                        android:text="50 PPM"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <!-- NO2 Level -->
+                    <TextView
+                        android:id="@+id/textViewNO2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewSO2Value"
+                        android:text="Level of NO2:"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <ImageView
+                        android:id="@+id/imageViewNO2Bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="6dp"
+                        android:layout_toEndOf="@id/textViewNO2"
+                        android:layout_below="@+id/textViewSO2Value"
+                        android:layout_toRightOf="@id/textViewNO2"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/level_bar_1" />
+
+                    <TextView
+                        android:id="@+id/textViewNO2Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/imageViewNO2Bar"
+                        android:layout_alignBottom="@id/textViewNO2"
+                        android:layout_marginStart="18dp"
+                        android:text="25 PPM"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <!-- NH3 Level -->
+                    <TextView
+                        android:id="@+id/textViewNH3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewNO2Value"
+                        android:text="Level of NH3:"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <ImageView
+                        android:id="@+id/imageViewNH3Bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="6dp"
+                        android:layout_toEndOf="@id/textViewNH3"
+                        android:layout_below="@+id/textViewNO2Value"
+                        android:layout_toRightOf="@id/textViewNH3"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/level_bar_1" />
+
+                    <TextView
+                        android:id="@+id/textViewNH3Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/imageViewNH3Bar"
+                        android:layout_alignBottom="@id/textViewNH3"
+                        android:layout_marginStart="18dp"
+                        android:text="40 PPM"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
         <LinearLayout
-            android:id="@+id/top_bar"
+            android:id="@+id/second_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
+            android:layout_below="@id/top_bar"
             android:backgroundTint="#DFDFDF"
             android:paddingStart="20dp"
             android:orientation="vertical"
-
             android:padding="12dp">
             <!-- Element Block-->
-            <!-- Element Block for 'Germination' -->
+            <!-- Element Block for 'Cafeteria' -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,10 +244,10 @@
                 android:layout_marginBottom="10dp">
 
                 <TextView
-                    android:id="@+id/textViewRoom"
+                    android:id="@+id/textViewCafeteriaRoom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Germination"
+                    android:text="Cafeteria"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#7C8293"
@@ -81,194 +257,133 @@
                 <!-- Repeating block for each gas -->
                 <!-- CO2 Level -->
                 <TextView
-                    android:id="@+id/textViewCO2"
+                    android:id="@+id/textViewCafeteriaCO2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/textViewRoom"
+                    android:layout_below="@id/textViewCafeteriaRoom"
                     android:text="Level of CO2:"
                     android:textSize="16sp"
                     android:textColor="#000000" />
 
                 <ImageView
-                    android:id="@+id/imageViewCO2Bar"
+                    android:id="@+id/imageViewCafeteriaCO2Bar"
                     android:layout_width="wrap_content"
                     android:layout_height="6dp"
-                    android:layout_toEndOf="@id/textViewCO2"
-                    android:layout_below="@+id/textViewRoom"
-                    android:layout_toRightOf="@id/textViewCO2"
+                    android:layout_toEndOf="@id/textViewCafeteriaCO2"
+                    android:layout_below="@+id/textViewCafeteriaRoom"
+                    android:layout_toRightOf="@id/textViewCafeteriaCO2"
                     android:layout_marginStart="18dp"
                     android:layout_marginTop="8dp"
                     android:src="@drawable/level_bar_1" />
 
                 <TextView
-                    android:id="@+id/textViewCO2Value"
+                    android:id="@+id/textViewCafeteriaCO2Value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/imageViewCO2Bar"
-                    android:layout_alignBottom="@id/textViewCO2"
+                    android:layout_toEndOf="@id/imageViewCafeteriaCO2Bar"
+                    android:layout_alignBottom="@id/textViewCafeteriaCO2"
                     android:layout_marginStart="18dp"
-                    android:text="130 PPM"
+                    android:text="1200 PPM"
                     android:textSize="16sp"
                     android:textColor="#000000" />
 
-                <!-- Repeat the above block for SO2, NO2, and NH3, making sure to update the IDs and text appropriately -->
-
-                <!-- Add additional TextViews and ImageViews for SO2, NO2, and NH3 below... -->
-
-            </RelativeLayout>
-
-            <!-- Element Block-->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:background="@drawable/rounded_corner"
-                android:backgroundTint="@color/white"
-                android:padding="8dp"
-                android:layout_marginBottom="10dp"
-                >
+                <!-- Repeat the above block for SO2, NO2, and NH3 -->
+                <!-- SO2 Level -->
+                <TextView
+                    android:id="@+id/textViewCafeteriaSO2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewCafeteriaCO2Value"
+                    android:text="Level of SO2:"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
 
                 <ImageView
-                    android:id="@+id/avatar2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_alignParentLeft="true"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/avatar" />
+                    android:id="@+id/imageViewCafeteriaSO2Bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="6dp"
+                    android:layout_toEndOf="@id/textViewCafeteriaSO2"
+                    android:layout_below="@+id/textViewCafeteriaCO2Value"
+                    android:layout_toRightOf="@id/textViewCafeteriaSO2"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/level_bar_2" />
 
                 <TextView
-                    android:id="@+id/notification_type2"
+                    android:id="@+id/textViewCafeteriaSO2Value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/avatar2"
-                    android:layout_marginLeft="15dp"
-                    android:text="Water Analysis Alert"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="#7C8293" />
+                    android:layout_toEndOf="@id/imageViewCafeteriaSO2Bar"
+                    android:layout_alignBottom="@id/textViewCafeteriaSO2"
+                    android:layout_marginStart="18dp"
+                    android:text="20 PPM"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
 
+                <!-- NO2 Level -->
                 <TextView
-                    android:id="@+id/notification_content2"
+                    android:id="@+id/textViewCafeteriaNO2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/avatar2"
-                    android:layout_below="@+id/notification_type2"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="4dp"
-                    android:text="Low pH"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/notification_time2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-
-                    android:layout_below="@+id/notification_type2"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="4dp"
-                    android:text="16:12"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/notification_date2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="15dp"
-
-                    android:text="Yesterday"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
-
-            </RelativeLayout>
-
-            <!-- Element Block-->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:background="@drawable/rounded_corner"
-                android:backgroundTint="@color/white"
-                android:padding="8dp"
-                android:layout_marginBottom="10dp"
-                >
+                    android:layout_below="@id/textViewCafeteriaSO2Value"
+                    android:text="Level of NO2:"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
 
                 <ImageView
-                    android:id="@+id/avatar3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_alignParentLeft="true"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/avatar" />
+                    android:id="@+id/imageViewCafeteriaNO2Bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="6dp"
+                    android:layout_toEndOf="@id/textViewCafeteriaNO2"
+                    android:layout_below="@+id/textViewCafeteriaSO2Value"
+                    android:layout_toRightOf="@id/textViewCafeteriaNO2"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/level_bar_1" />
 
                 <TextView
-                    android:id="@+id/notification_type3"
+                    android:id="@+id/textViewCafeteriaNO2Value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/avatar3"
-                    android:layout_marginLeft="15dp"
-                    android:text="Humidity Alert"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="#7C8293" />
+                    android:layout_toEndOf="@id/imageViewCafeteriaNO2Bar"
+                    android:layout_alignBottom="@id/textViewCafeteriaNO2"
+                    android:layout_marginStart="18dp"
+                    android:text="30 PPM"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <!-- NH3 Level -->
+                <TextView
+                    android:id="@+id/textViewCafeteriaNH3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewCafeteriaNO2Value"
+                    android:text="Level of NH3:"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imageViewCafeteriaNH3Bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="6dp"
+                    android:layout_toEndOf="@id/textViewCafeteriaNH3"
+                    android:layout_below="@+id/textViewCafeteriaNO2Value"
+                    android:layout_toRightOf="@id/textViewCafeteriaNH3"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/level_bar_1" />
 
                 <TextView
-                    android:id="@+id/notification_content3"
+                    android:id="@+id/textViewCafeteriaNH3Value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/avatar3"
-                    android:layout_below="@+id/notification_type3"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="4dp"
-                    android:text="High Humidity"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/notification_time3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-
-                    android:layout_below="@+id/notification_type3"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="4dp"
-                    android:text="10:55"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/notification_date3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="15dp"
-
-                    android:text="09/11/2023"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
-
+                    android:layout_toEndOf="@id/imageViewCafeteriaNH3Bar"
+                    android:layout_alignBottom="@id/textViewCafeteriaNH3"
+                    android:layout_marginStart="18dp"
+                    android:text="40 PPM"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
             </RelativeLayout>
-
-            <!-- Other TextViews can follow -->
-
-            <!-- Green Circle with TextView with LinearLayout -->
-
-
-
         </LinearLayout>
 
 

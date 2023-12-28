@@ -41,8 +41,8 @@
             android:padding="12dp">
 
             <ImageView
-                android:layout_width="199dp"
-                android:layout_height="83dp"
+                android:layout_width="169dp"
+                android:layout_height="72dp"
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
                 android:src="@drawable/water_analysis" />
