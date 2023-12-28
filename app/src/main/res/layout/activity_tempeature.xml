@@ -90,20 +90,10 @@
                 android:paddingBottom="8dp">
 
 
-                <TextView
-                    android:id="@+id/title_text_view1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-
-                    android:layout_weight="1"
-                    android:text="MDL Temperature :"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
+                =
 
                 <TextView
-                    android:id="@+id/tempfetch1"
+                    android:id="@+id/result"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -114,28 +104,9 @@
                     android:textSize="14dp"
                     android:textStyle="normal" />
 
-                <TextView
-                    android:id="@+id/humidity1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-                    android:text="Humidity :"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
 
-                <TextView
-                    android:id="@+id/humidityfetch1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-                    android:text="30 °C"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
+
+
                 <!-- Add other views like ImageView and TextView here -->
             </RelativeLayout>
 
