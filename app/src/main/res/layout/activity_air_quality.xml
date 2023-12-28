@@ -1,0 +1,365 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#E3E2E2">
+
+
+    <RelativeLayout
+        android:id="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#DFDFDF"
+            android:paddingStart="20dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="77dp"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/notification_taco_bell" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#DFDFDF"
+            android:paddingStart="20dp"
+            android:orientation="vertical"
+
+            android:padding="12dp">
+            <!-- Element Block-->
+            <!-- Element Block for 'Germination' -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="#FFFFFF"
+                android:padding="16dp"
+                android:elevation="4dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textViewRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Germination"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#7C8293"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Repeating block for each gas -->
+                <!-- CO2 Level -->
+                <TextView
+                    android:id="@+id/textViewCO2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewRoom"
+                    android:text="Level of CO2:"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imageViewCO2Bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="6dp"
+                    android:layout_toEndOf="@id/textViewCO2"
+                    android:layout_below="@+id/textViewRoom"
+                    android:layout_toRightOf="@id/textViewCO2"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/level_bar_1" />
+
+                <TextView
+                    android:id="@+id/textViewCO2Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/imageViewCO2Bar"
+                    android:layout_alignBottom="@id/textViewCO2"
+                    android:layout_marginStart="18dp"
+                    android:text="130 PPM"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <!-- Repeat the above block for SO2, NO2, and NH3, making sure to update the IDs and text appropriately -->
+
+                <!-- Add additional TextViews and ImageViews for SO2, NO2, and NH3 below... -->
+
+            </RelativeLayout>
+
+            <!-- Element Block-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/white"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/avatar2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/avatar" />
+
+                <TextView
+                    android:id="@+id/notification_type2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/avatar2"
+                    android:layout_marginLeft="15dp"
+                    android:text="Water Analysis Alert"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#7C8293" />
+
+                <TextView
+                    android:id="@+id/notification_content2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/avatar2"
+                    android:layout_below="@+id/notification_type2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Low pH"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/notification_time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_below="@+id/notification_type2"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="4dp"
+                    android:text="16:12"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/notification_date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="15dp"
+
+                    android:text="Yesterday"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <!-- Element Block-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/white"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/avatar3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/avatar" />
+
+                <TextView
+                    android:id="@+id/notification_type3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/avatar3"
+                    android:layout_marginLeft="15dp"
+                    android:text="Humidity Alert"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#7C8293" />
+
+                <TextView
+                    android:id="@+id/notification_content3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/avatar3"
+                    android:layout_below="@+id/notification_type3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:text="High Humidity"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/notification_time3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_below="@+id/notification_type3"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="4dp"
+                    android:text="10:55"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/notification_date3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="15dp"
+
+                    android:text="09/11/2023"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <!-- Other TextViews can follow -->
+
+            <!-- Green Circle with TextView with LinearLayout -->
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <!-- Task bar -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_toolbar"
+        android:backgroundTint="#B4C9F1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1.95">
+
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/btnDownloadPdf"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="56dp"-->
+        <!--            android:layout_margin="16dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textAllCaps="true"-->
+        <!--            app:icon="@drawable/home"-->
+        <!--            app:iconGravity="textStart"-->
+        <!--            app:iconPadding="10dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            tools:text="Download Pdf" />-->
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/home">
+
+        </ImageView>
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/settings" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/buttonManageAccounts"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="0.8"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Manage Accounts"-->
+        <!--            android:drawableLeft="@drawable/user"/>-->
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/user" />
+
+
+    </LinearLayout>
+</RelativeLayout>
