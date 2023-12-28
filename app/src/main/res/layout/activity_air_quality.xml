@@ -109,7 +109,7 @@
                         android:layout_toEndOf="@id/imageViewCO2Bar"
                         android:layout_alignBottom="@id/textViewCO2"
                         android:layout_marginStart="18dp"
-                        android:text="130 PPM"
+
                         android:textSize="16sp"
                         android:textColor="#000000" />
 
@@ -122,11 +122,11 @@
                     <!-- Repeat the above block for SO2, NO2, and NH3 -->
                     <!-- SO2 Level -->
                     <TextView
-                        android:id="@+id/textViewSO2"
+                        android:id="@+id/textViewTVOC"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textViewCO2Value"
-                        android:text="Level of SO2:"
+                        android:text="Level of TVOC:"
                         android:textSize="16sp"
                         android:textColor="#000000" />
 
@@ -134,21 +134,21 @@
                         android:id="@+id/imageViewSO2Bar"
                         android:layout_width="wrap_content"
                         android:layout_height="6dp"
-                        android:layout_toEndOf="@id/textViewSO2"
+                        android:layout_toEndOf="@id/textViewTVOC"
                         android:layout_below="@+id/textViewCO2Value"
-                        android:layout_toRightOf="@id/textViewSO2"
-                        android:layout_marginStart="18dp"
+                        android:layout_toRightOf="@id/textViewTVOC"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:src="@drawable/level_bar_1" />
+                        android:src="@drawable/level_bar_2" />
 
                     <TextView
-                        android:id="@+id/textViewSO2Value"
+                        android:id="@+id/textViewTVOCValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/imageViewSO2Bar"
-                        android:layout_alignBottom="@id/textViewSO2"
+                        android:layout_alignBottom="@id/textViewTVOC"
                         android:layout_marginStart="18dp"
-                        android:text="50 PPM"
+
                         android:textSize="16sp"
                         android:textColor="#000000" />
 
@@ -157,7 +157,7 @@
                         android:id="@+id/textViewNO2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/textViewSO2Value"
+                        android:layout_below="@id/textViewTVOCValue"
                         android:text="Level of NO2:"
                         android:textSize="16sp"
                         android:textColor="#000000" />
@@ -167,7 +167,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="6dp"
                         android:layout_toEndOf="@id/textViewNO2"
-                        android:layout_below="@+id/textViewSO2Value"
+                        android:layout_below="@+id/textViewTVOCValue"
                         android:layout_toRightOf="@id/textViewNO2"
                         android:layout_marginStart="18dp"
                         android:layout_marginTop="8dp"
@@ -180,7 +180,7 @@
                         android:layout_toEndOf="@id/imageViewNO2Bar"
                         android:layout_alignBottom="@id/textViewNO2"
                         android:layout_marginStart="18dp"
-                        android:text="25 PPM"
+                        android:text="25 ppm"
                         android:textSize="16sp"
                         android:textColor="#000000" />
 
@@ -212,7 +212,7 @@
                         android:layout_toEndOf="@id/imageViewNH3Bar"
                         android:layout_alignBottom="@id/textViewNH3"
                         android:layout_marginStart="18dp"
-                        android:text="40 PPM"
+                        android:text="40 ppm"
                         android:textSize="16sp"
                         android:textColor="#000000" />
 
@@ -283,18 +283,18 @@
                     android:layout_toEndOf="@id/imageViewCafeteriaCO2Bar"
                     android:layout_alignBottom="@id/textViewCafeteriaCO2"
                     android:layout_marginStart="18dp"
-                    android:text="1200 PPM"
+
                     android:textSize="16sp"
                     android:textColor="#000000" />
 
                 <!-- Repeat the above block for SO2, NO2, and NH3 -->
                 <!-- SO2 Level -->
                 <TextView
-                    android:id="@+id/textViewCafeteriaSO2"
+                    android:id="@+id/textViewCafeteriaTVOC"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textViewCafeteriaCO2Value"
-                    android:text="Level of SO2:"
+                    android:text="Level of TVOC:"
                     android:textSize="16sp"
                     android:textColor="#000000" />
 
@@ -302,21 +302,21 @@
                     android:id="@+id/imageViewCafeteriaSO2Bar"
                     android:layout_width="wrap_content"
                     android:layout_height="6dp"
-                    android:layout_toEndOf="@id/textViewCafeteriaSO2"
+                    android:layout_toEndOf="@id/textViewCafeteriaTVOC"
                     android:layout_below="@+id/textViewCafeteriaCO2Value"
-                    android:layout_toRightOf="@id/textViewCafeteriaSO2"
-                    android:layout_marginStart="18dp"
+                    android:layout_toRightOf="@id/textViewCafeteriaTVOC"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:src="@drawable/level_bar_2" />
 
                 <TextView
-                    android:id="@+id/textViewCafeteriaSO2Value"
+                    android:id="@+id/textViewCafeteriaTVOCValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@id/imageViewCafeteriaSO2Bar"
-                    android:layout_alignBottom="@id/textViewCafeteriaSO2"
+                    android:layout_alignBottom="@id/textViewCafeteriaTVOC"
                     android:layout_marginStart="18dp"
-                    android:text="20 PPM"
+
                     android:textSize="16sp"
                     android:textColor="#000000" />
 
@@ -325,7 +325,7 @@
                     android:id="@+id/textViewCafeteriaNO2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/textViewCafeteriaSO2Value"
+                    android:layout_below="@id/textViewCafeteriaTVOCValue"
                     android:text="Level of NO2:"
                     android:textSize="16sp"
                     android:textColor="#000000" />
@@ -335,7 +335,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="6dp"
                     android:layout_toEndOf="@id/textViewCafeteriaNO2"
-                    android:layout_below="@+id/textViewCafeteriaSO2Value"
+                    android:layout_below="@+id/textViewCafeteriaTVOCValue"
                     android:layout_toRightOf="@id/textViewCafeteriaNO2"
                     android:layout_marginStart="18dp"
                     android:layout_marginTop="8dp"
@@ -348,7 +348,7 @@
                     android:layout_toEndOf="@id/imageViewCafeteriaNO2Bar"
                     android:layout_alignBottom="@id/textViewCafeteriaNO2"
                     android:layout_marginStart="18dp"
-                    android:text="30 PPM"
+                    android:text="30 ppm"
                     android:textSize="16sp"
                     android:textColor="#000000" />
 
@@ -380,7 +380,7 @@
                     android:layout_toEndOf="@id/imageViewCafeteriaNH3Bar"
                     android:layout_alignBottom="@id/textViewCafeteriaNH3"
                     android:layout_marginStart="18dp"
-                    android:text="40 PPM"
+                    android:text="40 ppm"
                     android:textSize="16sp"
                     android:textColor="#000000" />
             </RelativeLayout>
@@ -421,6 +421,7 @@
         <!--            tools:text="Download Pdf" />-->
 
         <ImageView
+            android:id="@+id/imageViewHome"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
@@ -433,8 +434,8 @@
             android:gravity="center"
             android:padding="11dp"
             android:src="@drawable/home">
-
         </ImageView>
+
 
         <ImageView
 
