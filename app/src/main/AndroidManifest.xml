@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AndroidStudioPlanty"
         tools:targetApi="31">
         <activity
+            android:name=".Sign_in"
+            android:exported="false" />
+        <activity
             android:name=".popup_history"
             android:exported="false" />
         <activity
