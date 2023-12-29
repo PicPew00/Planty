@@ -7,29 +7,14 @@
     android:background="#E3E2E2">
 
 
-    <ImageView
-        android:id="@+id/new_image"
-        android:layout_width="match_parent"
-        android:layout_height="204dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="101dp"
-        android:layout_marginEnd="-3dp"
-        android:background="#A0D8DD"
-
-        android:scaleType="fitCenter"
-        android:src="@drawable/temp3" />
-
     <RelativeLayout
+        android:id="@id/top"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         >
 
         <LinearLayout
-            android:id="@+id/top_bar"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -41,7 +26,7 @@
             android:padding="12dp">
 
             <ImageView
-                android:layout_width="200dp"
+                android:layout_width="100dp"
                 android:layout_height="77dp"
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
@@ -52,320 +37,369 @@
 
 
     </RelativeLayout>
-    <!-- Task bar -->
 
-    <GridLayout
-        android:id="@+id/cards_grid"
+    <RelativeLayout
+        android:layout_below="@+id/top"
         android:layout_width="match_parent"
-        android:layout_height="335dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="300dp"
-        android:columnCount="2"
-        android:orientation="horizontal"
-        android:padding="16dp"
+        android:layout_height="wrap_content"
+        >
 
-        android:rowCount="2"> <!-- Padding added to prevent overlap with taskbar -->
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardView1"
-            android:layout_width="175dp"
-            android:layout_height="125dp"
-            android:layout_margin="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+        <!-- Element Block-->
+        <!-- Element Block for 'MDL Room' -->
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#DFDFDF"
+            android:paddingStart="20dp"
+            android:orientation="vertical"
+            android:padding="12dp">
 
+            <!-- Element Block for 'Germination' -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="#FFFFFF"
+                android:padding="16dp"
+                android:elevation="4dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textViewRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MDL Room"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#7C8293"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Repeating block for each gas -->
+                <!-- CO2 Level -->
+                <TextView
+                    android:id="@+id/textViewTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewRoom"
+                    android:text="Tempeature :"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+
+
+                <TextView
+                    android:id="@+id/textViewTempValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/textViewTemp"
+                    android:layout_alignBottom="@id/textViewTemp"
+                    android:layout_marginStart="18dp"
+
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <!-- Repeat the above block for SO2, NO2, and NH3 -->
+                <!-- SO2 Level -->
+
+
+                <!-- ... (Previous code remains the same) ... -->
+
+                <!-- Repeat the above block for SO2, NO2, and NH3 -->
+                <!-- SO2 Level -->
+                <TextView
+                    android:id="@+id/textViewHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewTemp"
+                    android:text="Humidity:"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+
+
+                <TextView
+                    android:id="@+id/HumidityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/textViewHumidity"
+                    android:layout_alignBottom="@id/textViewHumidity"
+                    android:layout_marginStart="41dp"
+
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/third_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/second_bar"
+            android:backgroundTint="#DFDFDF"
+            android:paddingStart="20dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <RelativeLayout
+                android:id="@+id/nurseryBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textViewNurseryRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="8dp"
+                    android:text="Nursery"
+                    android:textColor="#7C8293"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/nurseryTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewNurseryRoom"
+                    android:text="Tempeature:"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/nurserytemp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/nurseryTemp"
+                    android:text="21°C"
+                    android:layout_marginStart="18dp"
+                    android:layout_toEndOf="@id/nurseryTemp"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/Nurserycaffehum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nurseryTemp"
+                    android:text="Humitidy:"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+
+
+                <TextView
+                    android:id="@+id/nurseryhum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/Nurserycaffehum"
+
+                    android:text="57  %"
+                    android:layout_below="@+id/nurserytemp2"
+                    android:layout_marginStart="43dp"
+                    android:layout_toEndOf="@id/Nurserycaffehum"
+
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/forth_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/third_bar"
+            android:backgroundTint="#DFDFDF"
+            android:paddingStart="20dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+
+            <!-- Element Block for 'Germination' -->
+            <RelativeLayout
+                android:id="@+id/germinationBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textViewGerminationRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="8dp"
+                    android:text="Germination"
+                    android:textColor="#7C8293"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Temperature for Germination -->
+                <TextView
+                    android:id="@+id/germinationTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewGerminationRoom"
+                    android:text="Temperature:"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/germinationTempValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/germinationTemp"
+                    android:layout_marginStart="18dp"
+                    android:layout_toEndOf="@id/germinationTemp"
+                    android:text="22°C"
+                android:textColor="#000000"
+                android:textSize="19sp" />
+
+                <!-- Humidity for Germination -->
+                <TextView
+                    android:id="@+id/germinationHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/germinationTempValue"
+                    android:text="Humidity:"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/germinationHumidityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/germinationHumidity"
+                    android:layout_marginStart="49dp"
+                    android:layout_toEndOf="@id/germinationHumidity"
+                    android:text="65  %"
+                    android:textColor="#000000"
+                   android:textSize="19sp"/>
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/second_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_bar"
+            android:backgroundTint="#DFDFDF"
+            android:paddingStart="20dp"
+            android:orientation="vertical"
+            android:padding="12dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="8dp"
-
-                >
-
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/title_text_view0"
-                    android:layout_width="132dp"
-                    android:layout_height="34dp"
-                    android:layout_marginTop="20dp"
-
-                    android:layout_weight="1"
-                    android:text="MDL Temperature :"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/resultMDL67"
+                    android:id="@+id/textViewCafeteriaRoom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="8dp"
+                    android:text="Cafeteria"
+                    android:textColor="#7C8293"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
 
                 <TextView
-                    android:id="@+id/humidity0"
+                    android:id="@+id/CaffeText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-                    android:text="Humidity :"
+                    android:layout_below="@id/textViewCafeteriaRoom"
+                    android:text="Tempeature:"
                     android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
+                    android:textSize="19sp" />
+
+
 
                 <TextView
-                    android:id="@+id/resultMDL68"
+                    android:id="@+id/caffeValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
+                    android:layout_alignBottom="@id/CaffeText"
+                    android:layout_marginStart="18dp"
+                    android:layout_toEndOf="@id/CaffeText"
 
                     android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
+                    android:textSize="16sp" />
+
+                <!-- Repeat the above block for SO2, NO2, and NH3 -->
+                <!-- SO2 Level -->
+                <TextView
+                    android:id="@+id/Humiditycaffe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/caffeValue"
+                    android:text="Humitidy:"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
 
 
-                <!-- Add other views like ImageView and TextView here -->
+                <TextView
+                    android:id="@+id/HumiditycaffeVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/Humiditycaffe"
+                    android:layout_marginStart="41dp"
+                    android:layout_toEndOf="@id/Humiditycaffe"
+
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
             </RelativeLayout>
+        </LinearLayout>
 
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardView2"
-            android:layout_width="175dp"
-            android:layout_height="125dp"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="8dp">
+    </RelativeLayout>
 
 
 
-                <TextView
-                    android:id="@+id/title_text_view2"
-                    android:layout_width="132dp"
-                    android:layout_height="34dp"
-                    android:layout_marginTop="20dp"
 
-                    android:layout_weight="1"
-                    android:text="Caffe Temperature :"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/resultcaffe76"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/humidity2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-                    android:text="Humidity :"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/resultcaffe77"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <!-- Add other views like ImageView and TextView here -->
-            </RelativeLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardView3"
-            android:layout_width="175dp"
-            android:layout_height="125dp"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="8dp">
-
-
-
-                <TextView
-                    android:id="@+id/title_text_view3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:text="Nursery : "
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/tempfetch3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:text="18 °C"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/humidity3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-                    android:text="Humidity :"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/humidityfetch3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-                    android:text="48 %"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-                <!-- Add other views like ImageView and TextView here -->
-            </RelativeLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardView4"
-            android:layout_width="175dp"
-            android:layout_height="125dp"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-            >
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="8dp">
-
-
-
-                <TextView
-                    android:id="@+id/title_text_view4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:text="Germination : "
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/tempfetch4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:text="20 °C"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/humidity4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-                    android:text="Humidity :"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/humidityfetch4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-                    android:text="41 %"
-                    android:textColor="#000000"
-                    android:textSize="14dp"
-                    android:textStyle="normal" />
-
-                <!-- Add other views like ImageView and TextView here -->
-            </RelativeLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-    </GridLayout>
-
+    <!-- Task bar -->
     <LinearLayout
-        android:id="@+id/task_bar"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -376,7 +410,7 @@
         android:orientation="horizontal"
         android:padding="10dp"
         android:weightSum="1.95">
-        >
+
 
         <!--        <com.google.android.material.button.MaterialButton-->
         <!--            android:id="@+id/btnDownloadPdf"-->
@@ -407,11 +441,11 @@
             android:gravity="center"
             android:padding="11dp"
             android:src="@drawable/home">
-
         </ImageView>
 
+
         <ImageView
-            android:id="@+id/buttonSettings"
+
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
@@ -435,7 +469,7 @@
         <!--            android:drawableLeft="@drawable/user"/>-->
 
         <ImageView
-            android:id="@+id/buttonManageAccounts"
+
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"

@@ -41,11 +41,11 @@ public class Tempeature extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tempeature);
-        result68 = findViewById(R.id.resultMDL68); //MDL Humidity
-        result67 = findViewById(R.id.resultMDL67); //MDL Tempeatuere
+        result68 = findViewById(R.id.HumidityValue); //MDL Humidity
+        result67 = findViewById(R.id.textViewTempValue); //MDL Tempeatuere
 
-        result76 = findViewById(R.id.resultcaffe76);//Temp
-        result77 = findViewById(R.id.resultcaffe77);//hummi
+        result76 = findViewById(R.id.caffeValue);//Temp
+        result77 = findViewById(R.id.HumiditycaffeVal);//hummi
 
         requestQueue = Volley.newRequestQueue(this);
 
@@ -56,7 +56,7 @@ public class Tempeature extends AppCompatActivity {
 
         //Caffeteria
         getSingleSensorData(76, result76);
-        // Fetch data for ID 67
+
         getSingleSensorData(77, result77);
 
 
