@@ -52,13 +52,22 @@ public class Tempeature extends AppCompatActivity {
         //MDL
         getSingleSensorData(68, result68);
         // Fetch data for ID 67
-        getSingleSensorData(67, result67);
+        //getSingleSensorData(67, result67);
 
         //Caffeteria
-        getSingleSensorData(76, result76);
+        //getSingleSensorData(76, result76);
 
-        getSingleSensorData(77, result77);
+        //getSingleSensorData(77, result77);
 
+        ImageView historyIcon = findViewById(R.id.historyIcon);
+        historyIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open the activity_popup_history layout
+                Intent intent = new Intent(Tempeature.this, popup_history.class);
+                startActivity(intent);
+            }
+        });
 
         ImageView imageViewHome = findViewById(R.id.imageViewHome);
         imageViewHome.setOnClickListener(new View.OnClickListener() {

@@ -78,10 +78,21 @@
                     android:textStyle="bold"
                     android:textColor="#7C8293"
                     android:layout_alignParentTop="true"
-                    android:layout_marginBottom="8dp" />
+                    android:layout_marginEnd="8dp" />
 
                 <!-- Repeating block for each gas -->
                 <!-- CO2 Level -->
+
+                <ImageView
+                    android:id="@+id/historyIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/textViewRoom"
+                    android:layout_marginStart="208dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toEndOf="@id/textViewRoom"
+                    android:src="@drawable/history" />
+
                 <TextView
                     android:id="@+id/textViewTemp"
                     android:layout_width="wrap_content"
@@ -341,6 +352,8 @@
                     android:textColor="#7C8293"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
+
 
 
                 <TextView

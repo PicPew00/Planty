@@ -1,114 +1,171 @@
 package com.example.androidstudioplanty;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.util.Pair;
 
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CalendarView;
-import android.widget.PopupWindow;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.datepicker.MaterialDatePicker;
+import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.Date;
+import java.text.MessageFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class popup_history extends AppCompatActivity {
 
-    private RequestQueue requestQueue;
+    private String selectedStartingDate;
+    private String selectedEndingDate;
     private Gson gson;
-
-    private CalendarView calendarView;
-    private Button fetchButton;
-    private Button closeButton;
-    private TextView historyResultsTextView;
-    private PopupWindow popupWindow;
+    private RequestQueue requestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popup_history);
 
+        // Initialize Gson and RequestQueue
+        gson = new Gson();
         requestQueue = Volley.newRequestQueue(this);
 
-        calendarView = findViewById(R.id.calendarView);
-        fetchButton = findViewById(R.id.fetchButton);
-        closeButton = findViewById(R.id.closeButton);
-        historyResultsTextView = findViewById(R.id.historyResultsTextView);
+        MaterialButton button = findViewById(R.id.rangePicker);
+        TextView startingDate = findViewById(R.id.startingDate);
+        TextView endingDate = findViewById(R.id.endingDate);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MaterialDatePicker<Pair<Long, Long>> materialDatePicker = MaterialDatePicker.Builder.dateRangePicker().setSelection(new Pair<>(
+                        MaterialDatePicker.thisMonthInUtcMilliseconds(),
+                        MaterialDatePicker.todayInUtcMilliseconds()
+                )).build();
+                materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener<Pair<Long, Long>>() {
+                    @Override
+                    public void onPositiveButtonClick(Pair<Long, Long> selection) {
+                        // Format the selected dates
+                        selectedStartingDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date(selection.first));
+                        selectedEndingDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date(selection.second));
 
-        // Set a click listener for the fetch button
-        fetchButton.setOnClickListener(v -> {
-            // Fetch history data based on selected date range
-            String selectedDate = formatDate(calendarView.getDate());
-            getHistoryData(selectedDate);
-        });
+                        // Update the TextViews
+                        startingDate.setText(MessageFormat.format("Selected Starting Date: {0}", selectedStartingDate));
+                        endingDate.setText(MessageFormat.format("Selected Ending Date: {0}", selectedEndingDate));
 
-        // Set a click listener for the close button
-        closeButton.setOnClickListener(v -> {
-            // Close the popup_history activity
-            finish();
+                        // Call the method to fetch data with the selected dates
+                        int sensorId = 96; // Replace with your sensor ID
+                        TextView resultTextView = findViewById(R.id.resultTextView); // Replace with your TextView
+                        getSingleSensorData(sensorId, resultTextView);
+                    }
+                });
+
+                materialDatePicker.show(getSupportFragmentManager(), "tag");
+            }
         });
     }
-    private void getHistoryData(String selectedDate) {
-        String ENDPOINT = "https://mdl.frederick.ac.cy/cyriciotwebapis/api/Data/GetLineChartSingleSensorData";
+
+    private void getSingleSensorData(int sensorId, TextView resultTextView) {
+        String ENDPOINT = "https://mdl.frederick.ac.cy/cyriciotwebapis/api/Data/GetLineChartSingleSensorData"; // Replace with your API endpoint
 
         JSONObject requestBody = new JSONObject();
         try {
-            // Adjust the request body to match your API requirements
-            requestBody.put("id", 96);
-            requestBody.put("fromDate", selectedDate);
-            requestBody.put("toDate", selectedDate);
+            requestBody.put("id", sensorId);
+            requestBody.put("fromDate", selectedStartingDate);
+            requestBody.put("toDate", selectedEndingDate);
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, ENDPOINT, requestBody,
                     response -> {
-                        gson = new Gson();
-                        // Handle the API response and update historyResultsTextView
-                        // You can parse the JSON response and set it to historyResultsTextView.
+                        SingleValue sensorData = gson.fromJson(response.toString(), SingleValue.class);
+
+// Assuming you want to display all values in rounded boxes within a ScrollView
+                        // Assuming you want to display all values in rounded boxes within a ScrollView
+                        // Assuming you want to display all values with timestamps in rounded boxes within a ScrollView
+                        List<ValueItem> values = sensorData.getValues();
+                        if (values != null && !values.isEmpty()) {
+                            LinearLayout linearLayout = findViewById(R.id.scrollViewContainer); // Assuming you have this id in your XML
+
+                            for (ValueItem valueItem : values) {
+                                // Create a LinearLayout to hold both value and timestamp
+                                LinearLayout valueLayout = new LinearLayout(this);
+                                valueLayout.setOrientation(LinearLayout.VERTICAL);
+
+                                // Create a TextView for displaying the value
+                                TextView valueTextView = new TextView(this);
+                                valueTextView.setText(String.format("%s%s", valueItem.getValue(), sensorData.getUnit()));
+                                valueTextView.setBackgroundResource(R.drawable.rounded_corner2); // Add a rounded box background
+                                valueTextView.setPadding(16, 16, 16, 16); // Add padding for better visual appearance
+                                valueTextView.setGravity(Gravity.CENTER); // Center the text within the TextView
+
+                                // Set layout parameters for proper centering
+                                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                                        LinearLayout.LayoutParams.MATCH_PARENT,
+                                        LinearLayout.LayoutParams.WRAP_CONTENT
+                                );
+                                layoutParams.gravity = Gravity.CENTER;
+                                valueTextView.setLayoutParams(layoutParams);
+
+                                // Create a TextView for displaying the timestamp
+                                TextView timestampTextView = new TextView(this);
+                                try {
+                                    // Format the timestamp (adjust the format as needed)
+                                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+                                    Date date = valueItem.getDateAsDate(); // Using the new method to get the date
+                                    String formattedTimestamp = dateFormat.format(date);
+                                    timestampTextView.setText(formattedTimestamp);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+
+                                // Add value and timestamp TextViews to the valueLayout
+                                valueLayout.addView(valueTextView);
+                                valueLayout.addView(timestampTextView);
+
+                                // Add the valueLayout to the main LinearLayout
+                                linearLayout.addView(valueLayout);
+                            }
+                        } else {
+                            resultTextView.setText("No data available");
+                        }
+
+
+
                     },
                     error -> {
-                        historyResultsTextView.setText("Error fetching history data");
-                    }) {
+                        resultTextView.setText(error.getMessage());
+                    })
+
+            {
                 @Override
                 public Map<String, String> getHeaders() throws AuthFailureError {
                     Map<String, String> headers = new HashMap<String, String>();
                     headers.put("Content-Type", "application/json");
-                    headers.put("Authorization", "Bearer your_access_token");
+                    headers.put("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhY3NjNDIzQGZyZWRlcmljay5hYy5jeSIsImp0aSI6ImY4ZmUzYmJmLTNjNDctNDBkMi05YzI1LWFjYjNkODIwODhmNiIsImVtYWlsIjoiYWNzYzQyM0BmcmVkZXJpY2suYWMuY3kiLCJ1aWQiOiIwODk1MDQ2NS01YmZlLTRjZjYtYjQwNS1mM2YyNjNjY2YxNDkiLCJSb2xlIjoiQ3VzdG9tZXIiLCJyb2xlcyI6IkN1c3RvbWVyIiwiZXhwIjoxNzM0NTE0MTcxLCJpc3MiOiJTZWN1cmVBcGkiLCJhdWQiOiJTZWN1cmVBcGlVc2VyIn0.LFkVpXuraX7r8xQJa_VNGMYzTx0LdGS5T0BAcrgt6TA");
                     return headers;
                 }
             };
 
             requestQueue.add(request);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
-    private String formatDate(long timestamp) {
-        // Convert timestamp to Date object
-        Date date = new Date(timestamp);
-
-        // Extract year, month, and day of month from the date object
-        int year = date.getYear();
-        int month = date.getMonth() + 1; // Month is zero-indexed, so add 1
-        int dayOfMonth = date.getDate();
-
-        // Format the date string using the chosen format
-        String formattedDate = String.format("YYYY-MM-dd", year, month, dayOfMonth);
-        return formattedDate;
-    }
-
-
 }
