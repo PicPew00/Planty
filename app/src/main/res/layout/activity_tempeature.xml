@@ -84,7 +84,7 @@
                 <!-- CO2 Level -->
 
                 <ImageView
-                    android:id="@+id/historyIcon"
+                    android:id="@+id/sensorId96"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/textViewRoom"
@@ -183,7 +183,15 @@
                     android:textColor="#7C8293"
                     android:textSize="18sp"
                     android:textStyle="bold" />
-
+                <ImageView
+                    android:id="@+id/fakesens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/textViewNurseryRoom"
+                    android:layout_marginStart="231dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toEndOf="@id/textViewNurseryRoom"
+                    android:src="@drawable/history" />
 
                 <TextView
                     android:id="@+id/nurseryTemp"
@@ -272,6 +280,17 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
+
+                <ImageView
+                    android:id="@+id/fakesens2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/textViewGerminationRoom"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toEndOf="@id/textViewGerminationRoom"
+                    android:src="@drawable/history" />
+
                 <!-- Temperature for Germination -->
                 <TextView
                     android:id="@+id/germinationTemp"
@@ -342,6 +361,8 @@
                 android:elevation="4dp"
                 android:padding="16dp">
 
+
+
                 <TextView
                     android:id="@+id/textViewCafeteriaRoom"
                     android:layout_width="wrap_content"
@@ -354,7 +375,15 @@
                     android:textStyle="bold" />
 
 
-
+                <ImageView
+                    android:id="@+id/sensorId109"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/textViewCafeteriaRoom"
+                    android:layout_marginStart="227dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toEndOf="@id/textViewCafeteriaRoom"
+                    android:src="@drawable/history" />
 
                 <TextView
                     android:id="@+id/CaffeText"

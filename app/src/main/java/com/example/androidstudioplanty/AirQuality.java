@@ -59,6 +59,23 @@ public class AirQuality extends AppCompatActivity {
         getSingleSensorData(71, result71);
 
 
+        ImageView historyIcon96 = findViewById(R.id.sensorId99);
+        historyIcon96.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Set the appropriate sensorId (e.g., 96 for sensorId96)
+                int sensorId = 99;
+
+                // Open the activity_popup_history layout
+                Intent intent = new Intent(AirQuality.this, popup_history.class);
+
+                // Put the sensorId as an extra in the intent
+                intent.putExtra("sensorId", sensorId);
+
+                startActivity(intent);
+            }
+        });
+
 
         ImageView imageViewHome = findViewById(R.id.imageViewHome);
         imageViewHome.setOnClickListener(new View.OnClickListener() {

@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-public class popup_history extends AppCompatActivity {
+public class airqualityrange extends AppCompatActivity {
 
     private String selectedStartingDate;
     private String selectedEndingDate;
