@@ -2,7 +2,6 @@ package com.example.androidstudioplanty;
 
 import com.google.gson.annotations.SerializedName;
 
-
 import java.util.List;
 
 public class SingleValue {
@@ -28,6 +27,14 @@ public class SingleValue {
     private String lastUpdate;
     @SerializedName("rules")
     private List<Object> rules = null;
+
+    // New fields for handling values array
+    @SerializedName("fromDate")
+    private String fromDate;
+    @SerializedName("toDate")
+    private String toDate;
+    @SerializedName("values")
+    private List<ValueItem> values;
 
     public String getWidgetName() {
         return widgetName;
@@ -116,4 +123,30 @@ public class SingleValue {
     public void setRules(List<Object> rules) {
         this.rules = rules;
     }
+
+    // Getter and Setter for new fields
+    public String getFromDate() {
+        return fromDate;
+    }
+
+    public void setFromDate(String fromDate) {
+        this.fromDate = fromDate;
+    }
+
+    public String getToDate() {
+        return toDate;
+    }
+
+    public void setToDate(String toDate) {
+        this.toDate = toDate;
+    }
+
+    public List<ValueItem> getValues() {
+        return values;
+    }
+
+    public void setValues(List<ValueItem> values) {
+        this.values = values;
+    }
+
 }

@@ -80,8 +80,15 @@
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="8dp" />
 
-                    <!-- Repeating block for each gas -->
-                    <!-- CO2 Level -->
+                    <ImageView
+                        android:id="@+id/sensorId99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/textViewRoom"
+                        android:layout_marginStart="208dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_toEndOf="@id/textViewRoom"
+                        android:src="@drawable/history" />
                     <TextView
                         android:id="@+id/textViewCO2"
                         android:layout_width="wrap_content"
@@ -253,6 +260,17 @@
                     android:textColor="#7C8293"
                     android:layout_alignParentTop="true"
                     android:layout_marginBottom="8dp" />
+
+
+                <ImageView
+                    android:id="@+id/sensorId112"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/textViewCafeteriaRoom"
+                    android:layout_marginStart="223dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toEndOf="@id/textViewCafeteriaRoom"
+                    android:src="@drawable/history" />
 
                 <!-- Repeating block for each gas -->
                 <!-- CO2 Level -->

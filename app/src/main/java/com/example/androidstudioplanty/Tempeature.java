@@ -2,6 +2,7 @@ package com.example.androidstudioplanty;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -41,11 +42,11 @@ public class Tempeature extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tempeature);
-        result68 = findViewById(R.id.resultMDL68); //MDL Humidity
-        result67 = findViewById(R.id.resultMDL67); //MDL Tempeatuere
+        result68 = findViewById(R.id.HumidityValue); //MDL Humidity
+        result67 = findViewById(R.id.textViewTempValue); //MDL Tempeatuere
 
-        result76 = findViewById(R.id.resultcaffe76);//Temp
-        result77 = findViewById(R.id.resultcaffe77);//hummi
+        result76 = findViewById(R.id.caffeValue);//Temp
+        result77 = findViewById(R.id.HumiditycaffeVal);//hummi
 
         requestQueue = Volley.newRequestQueue(this);
 
@@ -56,8 +57,47 @@ public class Tempeature extends AppCompatActivity {
 
         //Caffeteria
         getSingleSensorData(76, result76);
-        // Fetch data for ID 67
+
         getSingleSensorData(77, result77);
+
+        ImageView historyIcon96 = findViewById(R.id.sensorId96);
+        historyIcon96.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Set the appropriate sensorId (e.g., 96 for sensorId96)
+                int sensorId = 96;
+
+                // Open the activity_popup_history layout
+                Intent intent = new Intent(Tempeature.this, popup_history.class);
+
+                // Put the sensorId as an extra in the intent
+                intent.putExtra("sensorId", sensorId);
+
+                startActivity(intent);
+            }
+        });
+
+        ImageView historyIcon109 = findViewById(R.id.sensorId109);
+        historyIcon109.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Click", "sensorId109 clicked");
+                // Set the appropriate sensorId (e.g., 109 for sensorId109)
+                int sensorId =109;
+
+                // Open the activity_popup_history layout
+                Intent intent = new Intent(Tempeature.this, popup_history.class);
+
+                // Put the sensorId as an extra in the intent
+                intent.putExtra("sensorId", sensorId);
+
+                startActivity(intent);
+            }
+        });
+
+
+
+
 
 
         ImageView imageViewHome = findViewById(R.id.imageViewHome);
