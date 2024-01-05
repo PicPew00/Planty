@@ -32,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageView imageViewManageAccounts = findViewById(R.id.imageViewManageAccounts);
+        imageViewManageAccounts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Open ManageAccountsActivity
+                Intent intent = new Intent(MainActivity.this, ManageAccounts.class);
+                startActivity(intent);
+            }
+        });
+
 
         // Setup the OnClickListener for the Tempeature
         MaterialCardView cardViewTemperature = findViewById(R.id.materialCardView4);

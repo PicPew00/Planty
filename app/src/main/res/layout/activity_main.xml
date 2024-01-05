@@ -425,7 +425,7 @@
                     android:layout_marginTop="52dp"
 
 
-                    android:text="Add Rooms"
+                    android:text="Schedule Activity"
                     android:textColor="#000000"
                     android:textSize="16dp"
                     android:textStyle="bold" />
@@ -439,7 +439,7 @@
                     android:layout_marginRight="60dp"
 
 
-                    android:text="Room Hue 2"
+
                     android:textColor="#000000"
                     android:textSize="14dp"
                     android:textStyle="normal" />
@@ -592,7 +592,7 @@
         <!--            android:drawableLeft="@drawable/user"/>-->
 
         <ImageView
-            android:id="@+id/buttonManageAccounts"
+            android:id="@+id/imageViewManageAccounts"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"

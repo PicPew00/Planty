@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Your existing styles -->
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@drawable/rounded_corner_dialog</item>
+    </style>
+
+</resources>

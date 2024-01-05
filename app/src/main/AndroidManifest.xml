@@ -15,18 +15,24 @@
         android:theme="@style/Theme.AndroidStudioPlanty"
         tools:targetApi="31">
         <activity
-            android:name=".ManageAccounts"
+            android:name=".account_item"
             android:exported="false" />
-        <!-- Set Sign_In as the launcher activity -->
+        <!-- Set MainActivity as the startup activity -->
         <activity
-            android:name=".Sign_In"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- Remove SignIn activity from here -->
+        <activity
+            android:name=".dialog_add_account"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+        <activity
+            android:name=".ManageAccounts"
+            android:exported="false" />
         <activity
             android:name=".popup_history"
             android:exported="false" />
@@ -36,12 +42,6 @@
         <activity
             android:name=".Tempeature"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false">
-
-            <!-- Remove the MAIN action and LAUNCHER category from MainActivity -->
-        </activity>
     </application>
 
 </manifest>
