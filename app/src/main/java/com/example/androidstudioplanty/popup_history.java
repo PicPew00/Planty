@@ -115,6 +115,7 @@ public class popup_history extends AppCompatActivity {
 
                                 TextView valueTextView = new TextView(this);
                                 valueTextView.setText(String.format("%s%s", valueItem.getValue(), sensorData.getUnit()));
+
                                 valueTextView.setBackgroundResource(R.drawable.rounded_corner2);
                                 valueTextView.setPadding(16, 16, 16, 16);
                                 valueTextView.setGravity(Gravity.CENTER);
@@ -128,7 +129,7 @@ public class popup_history extends AppCompatActivity {
 
                                 TextView timestampTextView = new TextView(this);
                                 try {
-                                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+                                    SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault());
                                     Date date = valueItem.getDateAsDate();
                                     String formattedTimestamp = dateFormat.format(date);
                                     timestampTextView.setText(formattedTimestamp);

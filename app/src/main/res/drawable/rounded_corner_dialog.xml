@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/dialog_background" />
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="16dp" />
+            <solid android:color="#00FFFFFF" />
+        </shape>
+    </item>
+</layer-list>
