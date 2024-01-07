@@ -359,7 +359,7 @@
         <!--            android:drawableLeft="@drawable/user"/>-->
 
         <ImageView
-
+            android:id="@+id/imageViewManageAccounts"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"

@@ -77,6 +77,17 @@ public class Tempeature extends AppCompatActivity {
             }
         });
 
+        ImageView imageViewManageAccounts = findViewById(R.id.analutic);
+        imageViewManageAccounts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Open ManageAccountsActivity
+                Intent intent = new Intent(Tempeature.this, data_visual.class);
+                startActivity(intent);
+            }
+        });
+
+
         ImageView historyIcon109 = findViewById(R.id.sensorId109);
         historyIcon109.setOnClickListener(new View.OnClickListener() {
             @Override
