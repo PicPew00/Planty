@@ -42,6 +42,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageView bellImageView = findViewById(R.id.bell);
+
+        bellImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to open the NotificationsActivity (replace NotificationsActivity.class with your actual activity)
+                Intent intent = new Intent(MainActivity.this, notifications.class);
+
+                // Start the NotificationsActivity
+                startActivity(intent);
+            }
+        });
+
+
 
         // Setup the OnClickListener for the Tempeature
         MaterialCardView cardViewTemperature = findViewById(R.id.materialCardView4);
@@ -50,6 +64,30 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Start TemperatureActivity
                 Intent intent = new Intent(MainActivity.this, Tempeature.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        // Setup the OnClickListener for the Tempeature
+        MaterialCardView cardViewWater = findViewById(R.id.materialCardView2);
+        cardViewWater.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start TemperatureActivity
+                Intent intent = new Intent(MainActivity.this, water_analysis.class);
+                startActivity(intent);
+            }
+        });
+
+            // Setup the OnClickListener for the Tempeature
+        MaterialCardView cardViewData = findViewById(R.id.materialCardView6);
+        cardViewData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start TemperatureActivity
+                Intent intent = new Intent(MainActivity.this, data_visual.class);
                 startActivity(intent);
             }
         });
