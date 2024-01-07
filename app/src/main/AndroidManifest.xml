@@ -24,23 +24,26 @@
             android:name=".data_visual"
             android:exported="false" />
         <activity
-            android:name=".account_item"
-            android:exported="false" /> <!-- Set MainActivity as the startup activity -->
+            android:name=".ManageAccounts"
+            android:exported="false" />
+        <!-- Set Sign_In as the launcher activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".Sign_In"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
         </activity> <!-- Remove SignIn activity from here -->
         <activity
             android:name=".dialog_add_account"
             android:theme="@style/Theme.AppCompat.Dialog" />
-        <activity
-            android:name=".ManageAccounts"
-            android:exported="false" />
+
         <activity
             android:name=".popup_history"
             android:exported="false" />
