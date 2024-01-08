@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,6 +26,20 @@ public class ManageAccounts extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_CODE_ADD_ACCOUNT);
             }
         });
+
+        ImageView imageViewHome = findViewById(R.id.imageViewHome);
+        imageViewHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start HomeActivity
+                Intent intent = new Intent(ManageAccounts.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
 
     @Override

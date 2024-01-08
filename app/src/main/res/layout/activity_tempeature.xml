@@ -222,6 +222,16 @@
                     android:layout_toEndOf="@id/textViewNurseryRoom"
                     android:src="@drawable/analytics" />
 
+                <ImageView
+                    android:id="@+id/notification_settings_alarm3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewNurseryRoom"
+                    android:layout_marginStart="157dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewNurseryRoom"
+                    android:src="@drawable/bell_alarm" />
+
 
 
                 <TextView
@@ -332,6 +342,16 @@
                     android:layout_marginBottom="-2dp"
                     android:layout_toEndOf="@id/textViewGerminationRoom"
                     android:src="@drawable/analytics" />
+
+                <ImageView
+                    android:id="@+id/notification_settings_alarm4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewGerminationRoom"
+                    android:layout_marginStart="124dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewGerminationRoom"
+                    android:src="@drawable/bell_alarm" />
                 <!-- Temperature for Germination -->
                 <TextView
                     android:id="@+id/germinationTemp"
@@ -427,7 +447,7 @@
                     android:src="@drawable/history" />
 
                 <ImageView
-                    android:id="@+id/sensorId99"
+                    android:id="@+id/analytic2"
                     android:layout_width="wrap_content"
                     android:layout_height="26dp"
                     android:layout_alignBottom="@id/textViewCafeteriaRoom"
@@ -435,6 +455,16 @@
                     android:layout_marginBottom="-2dp"
                     android:layout_toEndOf="@id/textViewCafeteriaRoom"
                     android:src="@drawable/analytics" />
+
+                <ImageView
+                    android:id="@+id/notification_settings_alarm2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewCafeteriaRoom"
+                    android:layout_marginStart="148dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewCafeteriaRoom"
+                    android:src="@drawable/bell_alarm" />
 
                 <TextView
                     android:id="@+id/CaffeText"
@@ -444,6 +474,7 @@
                     android:text="Tempeature:"
                     android:textColor="#000000"
                     android:textSize="19sp" />
+
 
 
 

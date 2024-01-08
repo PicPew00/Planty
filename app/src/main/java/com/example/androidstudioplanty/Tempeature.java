@@ -92,6 +92,16 @@ public class Tempeature extends AppCompatActivity {
             }
         });
 
+        ImageView imageViewanalytic2 = findViewById(R.id.analytic2);
+        imageViewanalytic2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Open ManageAccountsActivity
+                Intent intent = new Intent(Tempeature.this, data_visual.class);
+                startActivity(intent);
+            }
+        });
+
 
         ImageView historyIcon109 = findViewById(R.id.sensorId109);
         historyIcon109.setOnClickListener(new View.OnClickListener() {
@@ -145,7 +155,18 @@ public class Tempeature extends AppCompatActivity {
         });
 
 
+        ImageView imageViewNotificationAlarm2 = findViewById(R.id.notification_settings_alarm2);
+        imageViewNotificationAlarm2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Find the layout view to use as an anchor for the popup
+                View layout = findViewById(R.id.mainLayout); // Replace 'yourLayoutID' with the actual layout ID
 
+                // Create and show the custom dialog as a popup
+                AlarmDialog alarmDialog = new AlarmDialog(Tempeature.this, layout);
+                alarmDialog.show();
+            }
+        });
 
 
 
