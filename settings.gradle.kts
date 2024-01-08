@@ -12,6 +12,14 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+// settings.gradle.kts
+
+dependencyResolutionManagement {
+    repositories {
+        // Other repositories
+        maven { url = uri("https://jitpack.io") } // Add this line for MPAndroidChart
+    }
+}
 
 rootProject.name = "AndroidStudioPlanty"
 include(":app")

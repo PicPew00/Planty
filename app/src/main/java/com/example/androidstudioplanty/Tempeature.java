@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +19,13 @@ import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,8 +39,6 @@ public class Tempeature extends AppCompatActivity {
     private TextView result67;
     private TextView result68;
     private TextView result76 ,result77 ;
-
-
 
 
 
@@ -77,6 +82,27 @@ public class Tempeature extends AppCompatActivity {
             }
         });
 
+        ImageView imageViewManageAccounts = findViewById(R.id.analutic);
+        imageViewManageAccounts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Open ManageAccountsActivity
+                Intent intent = new Intent(Tempeature.this, data_visual.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageView imageViewanalytic2 = findViewById(R.id.analytic2);
+        imageViewanalytic2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Open ManageAccountsActivity
+                Intent intent = new Intent(Tempeature.this, data_visual.class);
+                startActivity(intent);
+            }
+        });
+
+
         ImageView historyIcon109 = findViewById(R.id.sensorId109);
         historyIcon109.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +135,41 @@ public class Tempeature extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+
+
+
+        ImageView imageViewNotificationAlarm = findViewById(R.id.notification_settings_alarm);
+        imageViewNotificationAlarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Find the layout view to use as an anchor for the popup
+                View layout = findViewById(R.id.mainLayout); // Replace 'yourLayoutID' with the actual layout ID
+
+                // Create and show the custom dialog as a popup
+                AlarmDialog alarmDialog = new AlarmDialog(Tempeature.this, layout);
+                alarmDialog.show();
+            }
+        });
+
+
+        ImageView imageViewNotificationAlarm2 = findViewById(R.id.notification_settings_alarm2);
+        imageViewNotificationAlarm2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Find the layout view to use as an anchor for the popup
+                View layout = findViewById(R.id.mainLayout); // Replace 'yourLayoutID' with the actual layout ID
+
+                // Create and show the custom dialog as a popup
+                AlarmDialog alarmDialog = new AlarmDialog(Tempeature.this, layout);
+                alarmDialog.show();
+            }
+        });
+
+
+
     }
     private void getSingleSensorData(int sensorId, TextView resultTextView) {
         String ENDPOINT = "https://mdl.frederick.ac.cy/cyriciotwebapis/api/Data/GetCardWidgetData"; // Replace with your API endpoint
@@ -140,8 +201,6 @@ public class Tempeature extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-
 
 
 

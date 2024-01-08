@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:id="@+id/mainLayout"
     android:background="#E3E2E2">
 
 
@@ -92,6 +92,25 @@
                     android:layout_marginBottom="2dp"
                     android:layout_toEndOf="@id/textViewRoom"
                     android:src="@drawable/history" />
+
+                <ImageView
+                    android:id="@+id/analutic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewRoom"
+                    android:layout_marginStart="160dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewRoom"
+                    android:src="@drawable/analytics" />
+                <ImageView
+                    android:id="@+id/notification_settings_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewRoom"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewRoom"
+                    android:src="@drawable/bell_alarm" />
 
                 <TextView
                     android:id="@+id/textViewTemp"
@@ -193,6 +212,28 @@
                     android:layout_toEndOf="@id/textViewNurseryRoom"
                     android:src="@drawable/history" />
 
+                <ImageView
+                    android:id="@+id/sensorId100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewNurseryRoom"
+                    android:layout_marginStart="190dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewNurseryRoom"
+                    android:src="@drawable/analytics" />
+
+                <ImageView
+                    android:id="@+id/notification_settings_alarm3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewNurseryRoom"
+                    android:layout_marginStart="157dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewNurseryRoom"
+                    android:src="@drawable/bell_alarm" />
+
+
+
                 <TextView
                     android:id="@+id/nurseryTemp"
                     android:layout_width="wrap_content"
@@ -291,6 +332,26 @@
                     android:layout_toEndOf="@id/textViewGerminationRoom"
                     android:src="@drawable/history" />
 
+
+                <ImageView
+                    android:id="@+id/sensorId102"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewGerminationRoom"
+                    android:layout_marginStart="154dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewGerminationRoom"
+                    android:src="@drawable/analytics" />
+
+                <ImageView
+                    android:id="@+id/notification_settings_alarm4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewGerminationRoom"
+                    android:layout_marginStart="124dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewGerminationRoom"
+                    android:src="@drawable/bell_alarm" />
                 <!-- Temperature for Germination -->
                 <TextView
                     android:id="@+id/germinationTemp"
@@ -385,6 +446,26 @@
                     android:layout_toEndOf="@id/textViewCafeteriaRoom"
                     android:src="@drawable/history" />
 
+                <ImageView
+                    android:id="@+id/analytic2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewCafeteriaRoom"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewCafeteriaRoom"
+                    android:src="@drawable/analytics" />
+
+                <ImageView
+                    android:id="@+id/notification_settings_alarm2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@id/textViewCafeteriaRoom"
+                    android:layout_marginStart="148dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toEndOf="@id/textViewCafeteriaRoom"
+                    android:src="@drawable/bell_alarm" />
+
                 <TextView
                     android:id="@+id/CaffeText"
                     android:layout_width="wrap_content"
@@ -393,6 +474,7 @@
                     android:text="Tempeature:"
                     android:textColor="#000000"
                     android:textSize="19sp" />
+
 
 
 

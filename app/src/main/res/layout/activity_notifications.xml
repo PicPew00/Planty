@@ -73,7 +73,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_alignParentLeft="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/avatar" />
+                    android:src="@drawable/user2" />
 
                 <TextView
                     android:id="@+id/notification_type"
@@ -146,7 +146,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_alignParentLeft="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/avatar" />
+                    android:src="@drawable/user2" />
 
                 <TextView
                     android:id="@+id/notification_type2"
@@ -219,7 +219,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_alignParentLeft="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/avatar" />
+                    android:src="@drawable/user2" />
 
                 <TextView
                     android:id="@+id/notification_type3"
@@ -359,7 +359,7 @@
         <!--            android:drawableLeft="@drawable/user"/>-->
 
         <ImageView
-
+            android:id="@+id/imageViewManageAccounts"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
